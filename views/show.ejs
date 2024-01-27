@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Show route</title>
+</head>
+<body>
+    <h3 class="heading"> Instagram Post </h3>
+    <div class="wt">
+    <% for(pos of namelist){ %>
+        <section class="wt-sec">
+       <h6><%= pos.name %></h6>
+        <p class="msg"><%=pos.msg %></p>
+        <br>
+       <button> <a href="http://localhost:8080/posts/<%= pos.id %>">See in Details</a></button>
+       &nbsp;&nbsp;
+      <button> <a href="http://localhost:8080/posts/<%=pos.id%>/edit">See in Details</a></button>
+      <form method="post" action="/posts/<%=pos.id%>?_method=DELETE">
+        <button>Delete Post</button>
+      </form>
+    </section>
+    <% } %>
+    </div>
+    <br>
+<button><a href="http://localhost:8080/posts/new">create new post</a></button>
+</body>
+</html>

@@ -1,0 +1,24 @@
+body{
+    
+    background-color: yellow;
+}
+.wt{
+    display: flex;
+    
+    flex-wrap: wrap;
+  
+    margin-top: 50px;
+    
+}
+.heading{
+    padding-left: 500px;
+    color: red;
+}
+.wt-sec{
+    border: 1px solid black;
+    padding: 20px 20px 20px 20px;
+    margin: 10px 10px 10px 10px;
+}
+.msg{
+    color: green;
+}
